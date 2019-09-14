@@ -1,5 +1,5 @@
 /* USER CODE BEGIN Header */
-// vi: ft=cpp
+// vi: ft=cpp:ts=2:sw=2
 /**
   ******************************************************************************
   * @file           : main.c
@@ -103,9 +103,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
     std::cout << "Poyoyo: " << HAL_GetTick() << std::endl;
     HAL_Delay(1000);
+    /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -321,10 +321,10 @@ void Error_Handler(void)
   */
 void assert_failed(uint8_t *file, uint32_t line)
 { 
-    printf("Wrong parameters value: file %s on line %ld\r\n", file, line);
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  printf("Wrong parameters value: file %s on line %ld\r\n", file, line);
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
